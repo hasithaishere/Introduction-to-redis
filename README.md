@@ -6,7 +6,7 @@ To install Redis in ubuntu first clone the this branch and run install_in_ubuntu
 
 ```js
 
-sh install.sh
+sudo sh install.sh
 ```
 After installation have been completed Redis automatically start as a service.
 
