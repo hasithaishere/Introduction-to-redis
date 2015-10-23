@@ -82,7 +82,7 @@ grunt
 
 Alright and if everything went well for you, your default web browser should have launched with the live chat app where you can send a message:
 
-![](ss4.png)
+![Alt text](http://gdurl.com/ObvE "")
 
 You'll notice the debug output when you send a message:
 
@@ -106,13 +106,13 @@ debug - websocket writing 5:::{"name":"blast","args":[{"msg":"<span style=\"colo
 
 Notice that multiple clients can chat with each other when they connect to the same server. This is a high-level look at the application messaging architecture:
 
-![](ss1.png)
+![Alt text](http://gdurl.com/tQxZ "")
 
 A client sends a message to everyone else connected to the server by dispatching a message to the server. Then the server broadcasts it to its connected clients.
 
 Running locally we have 1 server, however when you roll out a service, you want more than just 1 instance of the server running. Say we add another Socket.IO server to scale the chat service:
 
-![](ss2.png)
+![Alt text](http://gdurl.com/o4Yq "")
 
 Now, the way things are, Client D would never get any messages from clients A B 
 or C. 
@@ -146,13 +146,13 @@ var socket = io.connect('http://127.0.0.1:1338/');
 
 Notice, how we can't send a message from one window to the other:
 
-![](ss5.png)
+![Alt text](http://gdurl.com/NKdh "")
 
 #### Scaling With Redis
 
 A great way to solve this is by using Redis' pub/sub feature to facilitate messages between our Socket.IO servers. With this here's how our architecture looks:
 
-![](ss3.png)
+![Alt text](http://gdurl.com/gfum "")
 
 In this scenario, client D can now receive a message from client A because the backend servers are connected with Redis.
 
@@ -195,7 +195,7 @@ Now run both applications by using two terminal windows and executing `grunt`. N
 
 Notice now, we can send messages between the windows, even though they are both connected to two different Socket.IO servers:
 
-![](ss6.png)
+![Alt text](http://gdurl.com/DDa0 "")
 
 Redis allows us to horizontally scale our service allowing multiple servers to publish and subscribe to messages so that users connected to different instances of the app can communicate.
 
@@ -203,4 +203,4 @@ We won't actually do this in our walkthrough but when you deploy to [Azure](http
 
 Here's what this architecture would look like in an actual cloud deployment:
 
-![](ss7.png)
+![Alt text](http://gdurl.com/StiX "")
