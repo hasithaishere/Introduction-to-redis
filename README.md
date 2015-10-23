@@ -1,4 +1,14 @@
-# Redis Publish-Subscribe
+# Introduction to Redis
+
+## Install Redis in ubuntu
+
+To install Redis in ubuntu first clone the this branch and run install_in_ubuntu/install.sh file using following command.
+
+```js
+
+sh install.sh
+```
+After installation have been completed Redis automatically start as a service.
 
 ## Using Redis Publish-Subscribe with Node.js
 
