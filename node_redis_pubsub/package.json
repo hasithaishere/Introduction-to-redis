@@ -1,0 +1,14 @@
+{
+  "name": "node_redis_pubsub",
+  "version": "1.0.0",
+  "description": "Sample console application for demostrate the Redis sub-pub functionality",
+  "main": "pub.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hasitha Prabhath Gamage",
+  "license": "MIT",
+  "dependencies": {
+    "redis": "^2.2.5"
+  }
+}
